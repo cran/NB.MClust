@@ -1,0 +1,10 @@
+509f01ccabec0931ee05082e9e4ac396 *DESCRIPTION
+d657825cc95dbcc23fe32193c98fc938 *NAMESPACE
+4ce0142507be78c6748c894248551a12 *R/NB.MClust.R
+6ada63b7da773552d8140e3efbbb5ff9 *R/Simulated_Count.R
+aacf18ae4a3d14da06ed623fcb41f5d9 *R/estep.R
+eee7f5d9029a90986a298981487f53ff *R/nb.density.R
+0622482eb35abd67b443bc31d597302d *data/Simulated_Count.RData
+7d28f6bf461466dd88f5dd5d4df984a6 *man/NB.MClust.Rd
+236232c5d9d69e037165ae2df5af071f *man/Simulated_Count.Rd
+c39e6febf11153c3b4f810670ff32fa8 *man/nb.density.Rd
