@@ -5,7 +5,7 @@
 \title{NB.MClust Function}
 \usage{
 NB.MClust(Count, K, ini.shift.mu = 0.01, ini.shift.theta = 0.01,
-  tau0 = 10, rate = 0.9, bic = TRUE, iteration = 50)
+  tau0 = 10, rate = 0.9, bic = TRUE, iteration = 100)
 }
 \arguments{
 \item{Count}{Data matrix of discrete counts.This function groups rows of the data matrix.}

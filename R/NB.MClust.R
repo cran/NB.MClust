@@ -38,7 +38,7 @@
 #' @export 
 
 
-NB.MClust=function(Count,K,ini.shift.mu=0.01,ini.shift.theta=0.01,tau0=10,rate=0.9,bic=TRUE,iteration=50){
+NB.MClust=function(Count,K,ini.shift.mu=0.01,ini.shift.theta=0.01,tau0=10,rate=0.9,bic=TRUE,iteration=100){
   
   if(any(is.na(Count))) stop('Invalid values in count matrix: NA')
   if(any(Count<0)) stop('Invalid values in count matrix: Negative')
@@ -51,12 +51,12 @@ if (length(K)==1){
   bic=TRUE
   m=vector(mode='list',length=length(K))
   all.bic=NULL
-  for(k in 1:length(K)){
-    m[[k]]=NBMB(Count,K[k],ini.shift.mu,ini.shift.theta,tau0,rate,bic=T,iteration)
+  for(k in K){
+    m[[k]]=NBMB(Count,k,ini.shift.mu,ini.shift.theta,tau0,rate,bic=T,iteration)
     all.bic=c(all.bic,m[[k]]$BIC)
   }
-  opt.K=K[bic==min(bic,na.rm=T)]
-  opt.m=m[[bic==min(bic,na.rm=T)]]
+  opt.K=K[all.bic==min(all.bic,na.rm=T)]
+  opt.m=m[[opt.K]]
   return(opt.m)
  }
 }
@@ -67,6 +67,7 @@ if (length(K)==1){
 
 
 NBMB=function(Count,K,ini.shift.mu,ini.shift.theta,tau0,rate,bic,iteration){
+
 if(!requireNamespace('MASS')) {
   install.packages('MASS')  
   if(!requireNamespace('MASS',character.only = TRUE)) stop("Package 'MASS' not found")}
