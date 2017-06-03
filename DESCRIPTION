@@ -1,6 +1,6 @@
 Package: NB.MClust
 Title: Negative Binomial Model-Based Clustering
-Version: 1.0.1
+Version: 1.1.1
 Authors@R: person("Qian", "Li", email = "qian.li10000@gmail.com", role = c("aut", "cre"))
 Description: Model-based clustering of high-dimensional non-negative
              data that follow Generalized Negative Binomial distribution. All functions 
@@ -13,8 +13,8 @@ LazyData: true
 RoxygenNote: 6.0.1
 Imports: MASS, utils
 NeedsCompilation: no
-Packaged: 2017-06-02 19:19:30 UTC; 4466693
+Packaged: 2017-06-03 01:07:56 UTC; 4466693
 Author: Qian Li [aut, cre]
 Maintainer: Qian Li <qian.li10000@gmail.com>
 Repository: CRAN
-Date/Publication: 2017-06-02 19:23:58 UTC
+Date/Publication: 2017-06-03 12:08:50 UTC
